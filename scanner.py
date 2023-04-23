@@ -44,7 +44,7 @@ for i in range(1, 8001):
         with open('scan1.txt', 'a') as sf1:
             sf1.writelines(R)
 			
-sf1.close()
+    		sf1.close()
 	
 		
 print('End ')
