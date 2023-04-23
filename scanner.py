@@ -14,18 +14,19 @@ icounter=0
 
 
 def scanport(target, port):
-	s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	
-	if s == 0:
-		print(' ',target,'~Port %d [open]'%port)
-		print('before close')
-		s.close()
-		icounter=2
-		woo.append('if')
-		
-	else:
-		icounter=1
-		woo.append('else')
+        global icounter, woo
+        s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+        if s == 0:
+                print(' {target} ~~~Port {port} is [open]')
+                print('before close')
+                s.close()
+                icounter=2
+                woo.append('if')
+
+        else:
+                icounter=1
+                woo.append('else')
 		
 	
 		
