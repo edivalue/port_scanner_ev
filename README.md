@@ -3,9 +3,8 @@
 A simple Python script that scans for open ports on a specified host. The script is multi-threaded to speed up the scan process. It is a tool used by system administrators and security analysts to identify potential vulnerabilities in a network.
 
 # Usage
-Clone the repository using git clone https://github.com/<username>/port-scanner.git
-Run cd port-scanner to enter the project directory
-Run the script using python3 port_scanner.py <hostname or IP address> or simply ./port_scanner.py <hostname or IP address> if executable permission is set
+
+Run the script using python3 scanner.py <hostname or IP address> or simply ./scanner.py <hostname or IP address> if executable permission is set
 The script will scan for open ports between port 1 and port 8000 and output the results on the console
 
 # Contributing
