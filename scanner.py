@@ -32,19 +32,17 @@ def scanport(target, port):
 		
 f=[]		
 for i in range(1, 8001):
-	scan=threading.Thread(target=scanport(target, i))
-	scan.start()
-	f.append(scan)	
-	if type(f)==str:
-		with open('scan.txt', 'a') as sf:
-			sf.write(f)
-			sf.close()
-			
-	else:
-		ri=f.pop()
-		r=str(ri)
-		with open('scan1.txt', 'a') as sf1:
-			sf1.writelines(r)
+    scan=threading.Thread(target=scanport, args=(target, i))
+    scan.start()
+    f.append(scan)
+    if isinstance(ri, str):
+        with open('scan.txt', 'a') as sf:
+            sf.write(ri)
+    else:
+        ri=f.pop()
+        R=str(ri)
+        with open('scan1.txt', 'a') as sf1:
+            sf1.writelines(R)
 			
 sf1.close()
 	
